@@ -1,0 +1,46 @@
+<div id = "objects_content">
+    <p>Sort by: </p>
+    &raquo; <a href = "?action=objects&task=list&object=remotes">Name: from A to Z</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=remotes&desc=1">Name: from Z to A</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=remotes&order=usage">Network usage: ascending</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=remotes&order=usage&desc=1">Network usage: descending</a>
+    <br /><br />
+    <table class = "objects-list remotes" border = "0" cellspacing = "0" cellpadding = "0">
+        <tr>
+            <th class = "object-list-id">
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th class = "object-list-address">
+                Address IP v4
+            </th>
+            <th class = "object-list-address6">
+                Address IP v6
+            </th>
+            <th class = "object-list-details">
+                Details
+            </th>
+        </tr>
+        <?php foreach($this->_vars->remotes as $remote) : ?>
+        <tr>
+            <td>
+                <?php echo $remote['master_id'] ?>
+            </td>
+            <td>
+                <?php echo $remote['name'] ?>
+            </td>
+            <td>
+                <?php echo $remote['address'] ?>
+            </td>
+            <td>
+                <?php echo $remote['address6'] ?>
+            </td>
+            <td>
+                <a href = "?action=objects&amp;task=details&amp;object=remote&amp;id=<?php echo $remote['master_id'] ?>">Details</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

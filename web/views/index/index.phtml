@@ -1,0 +1,12 @@
+<div id = "index-content">
+    <?php if($this->_vars->data) : ?>
+    <div id = "main-loader">
+        <h1>Please wait. Loading...</h1>
+        <img src = "images/main-loader.gif" border = "0" />
+        <p>NMonit is loading objects and network usage information</p>
+        <p class = "loader-desc">It may take a few seconds for a large amount of data</p>
+    </div>
+    <?php else : ?>
+    <h2 style = "text-align: center">No data will be saved yet</h2>
+    <?php endif ?>
+</div>

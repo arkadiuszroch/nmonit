@@ -1,0 +1,24 @@
+<div id = "net-usage-details-content">
+<?php foreach($this->_vars->compare_data as $compare_name => $compare_object) : ?>
+    
+    <div id = "<?php echo $compare_name; ?>_download" class = "left"></div>
+    <div id = "<?php echo $compare_name; ?>_upload" class = "left"></div>
+    <div class = "clear"></div>
+    
+    <?php foreach($compare_object as $compare_type => $compare_data) : ?>
+
+    <table id = "compare_<?php echo $compare_name; ?>s_details_<?php echo $compare_type?>" class = "compare_details left" cellspacing = "1" cellpadding = "1">
+         <tr>
+             <th class = "name">Name</th>
+             <th class = "value"><?php echo $this->_vars->types[$compare_type]?></th>
+         </tr>
+         <?php foreach($compare_data as $compare_values) : ?>
+         <tr>
+             <td><?php echo $compare_values['name']?> </td>
+             <td><?php echo $compare_values['value']?> </td>
+         </tr>
+         <?php endforeach ?>
+     </table>
+    <?php endforeach ?>
+    <div class = "clear"></div>
+<?php endforeach ?>

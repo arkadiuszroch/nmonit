@@ -1,0 +1,10 @@
+# Available levels
+# NM_DEBUG_LEVEL_STOP - 1 (stopped application when exception or error occours and display info)
+# NM_DEBUG_LEVEL_PRINT - 2 (display debug info at the bottom of displayed site)
+# NM_DEBUG_LEVEL_FILE - 3 (print debug info to file)
+# NM_DEBUG_LEVEL_OFF - 4 (disable getting debug info)
+
+SetEnv NM_DEBUG_LEVEL 1
+
+# development or production
+SetEnv NM_APPLICATION_ENV development

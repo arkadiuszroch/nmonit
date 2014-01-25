@@ -1,0 +1,23 @@
+<?php if(!$this->_vars->valid): ?>
+<h1>No id was given</h1>
+<?php return; endif; ?>
+
+<?php if(!$this->_vars->exists): ?>
+<h1>Object with this id doesn exists</h1>
+<?php return; endif; ?>
+
+<a href = "<?php echo $this->_vars->back ?>">Back</a>
+
+<div id = "object-details-content">
+    <div id = "tabs">
+        <ul>
+            <li><a href = "#details">Details</a></li>
+            <li><a href = "?action=objects&task=up-down&object=<?php echo $this->_vars->type ?>&id=<?php echo $this->_vars->id?>"<?php echo $this->_vars->title?>>Download / Upload</a></li>
+            <li><a href = "?action=objects&task=net-usage&object=<?php echo $this->_vars->type ?>&id=<?php echo $this->_vars->id?>"<?php echo $this->_vars->title?>>Net usage history</a></li>
+            <li><a href = "?action=objects&task=net-usage-compare&object=<?php echo $this->_vars->type ?>&id=<?php echo $this->_vars->id?>"<?php echo $this->_vars->title?>>Net usage details</a></li>
+        </ul>
+        <div id = "details">
+            <?php include VIEWS_DIR . "objects/details/{$this->_vars->type}" . PHTML_EXT ?>
+        </div>
+    </div>
+</div>

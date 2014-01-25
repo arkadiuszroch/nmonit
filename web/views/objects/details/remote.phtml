@@ -1,0 +1,96 @@
+<div class = "left details-left">
+    <h1>Remote details: <?php echo $this->_vars->remote->get_name() ?></h1>
+
+    <table class = "object-details" cellspacing = "1" cellpadding = "1" align = "left">
+        <tr>
+            <td class = "label">
+                ID:
+            </td>
+            <td>
+                <?php echo $this->_vars->remote->get_id() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Name:
+            </td>
+            <td>
+                <?php echo $this->_vars->remote->get_name() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Address IP v4:
+            </td>
+            <td>
+                <?php echo $this->_vars->remote->get_address() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Address IP v6:
+            </td>
+            <td>
+                <?php echo $this->_vars->remote->get_address6() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Added time:
+            </td>
+            <td>
+                <?php echo $this->_vars->remote->get_added_time()->get_date('H:i:s d-m-Y') ?>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class ="left details-right">
+    <h2>History:</h2>
+    <?php if(count($this->_vars->history) == 0) : ?>
+    <p>There are no history for this remote</p>
+    <?php else: foreach($this->_vars->history as $history) : ?>
+    <table class = "object-details" cellspacing = "1" cellpadding = "1" align = "left">
+        <tr>
+            <td class = "label">
+                ID:
+            </td>
+            <td>
+                <?php echo $history->id ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Name:
+            </td>
+            <td>
+                <?php echo $history->name ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Address IP v4:
+            </td>
+            <td>
+                <?php echo $history->address ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Address IP v6:
+            </td>
+            <td>
+                <?php echo $history->address6 ?>
+            </td>
+        </tr>
+        <tr>
+            <td class = "label">
+                Added time:
+            </td>
+            <td>
+                <?php echo $history->added_time->get_date('H:i:s d-m-Y') ?>
+            </td>
+        </tr>
+    </table>
+    <?php endforeach; endif; ?>
+</div>
+<div class = "clear"></div>

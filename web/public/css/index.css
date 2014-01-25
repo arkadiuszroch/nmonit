@@ -1,0 +1,36 @@
+#index-content #main-loader
+{
+    text-align: center;
+}
+
+#index-content #main-loader h1
+{
+    font-size: 16px;
+}
+
+#index-content #main-loader img
+{
+    padding: 10px 0;
+}
+
+#index-content #main-loader p
+{
+    font-size: 12px;
+}
+
+#index-content #charts
+{
+    text-align: center;
+}
+
+#index-content #charts > h2
+{
+    text-align: center;
+    font-size: 18px;
+}
+
+#index-content #charts > div
+{
+    height: 250px;
+    width: 50%;
+}

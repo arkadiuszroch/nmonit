@@ -1,0 +1,238 @@
+a
+{
+    color: #117;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+#objects_content .err_msg
+{
+    display:none;
+}
+
+#objects_content h1
+{
+    font-size: 20px;
+}
+
+#objects_content h2
+{
+    text-align: center;
+}
+
+#objects_content h2 a
+{
+    font-size: 15px;
+}
+
+#objects_content h2 a span
+{
+    font-size: 10px;
+    font-weight: normal;
+}
+
+#objects_content table
+{
+    width: 100%;
+}
+
+#objects_content table th
+{
+    background: #fff;
+}
+
+#objects_content table td
+{
+    vertical-align: top;
+    text-align: left;
+    background: #fff;
+}
+
+#objects_content > table
+{
+    background: #ccc;
+}
+
+#objects_content > table.objects-main-list > tbody > tr > td
+{
+    width: 495px;
+    padding: 10px;
+}
+
+#objects_content table.objects-list th
+{
+    padding: 3px 0;
+    border-bottom: 1px solid #999;
+}
+
+#objects_content table.objects-list td
+{
+    border-bottom: 1px solid #bbb;
+    padding: 3px 0;
+}
+
+#objects_content th.object-list-details
+{
+    width: 50px;
+}
+
+#objects_content th.object-list-id
+{
+    width: 30px;
+}
+
+#objects_content > table.objects-list.programs
+{
+    width: 500px;
+}
+
+#objects_content table.programs th.object-list-name
+{
+    width: 300px;
+}
+
+#objects_content > table.objects-list.users
+{
+    width: 500px;
+}
+
+#objects_content th.object-list-system_id
+{
+    width: 70px;
+}
+
+#objects_content table.users th.object-list-name
+{
+    width: 230px;
+}
+
+#objects_content > table.objects-list.devices,
+#objects_content > table.objects-list.remotes
+{
+    width: 900px;
+}
+
+#objects_content table.devices th.object-list-name,
+#objects_content table.remotes th.object-list-name
+{
+    width: 200px;
+}
+
+#objects_content table.devices th.object-list-address,
+#objects_content table.remotes th.object-list-address
+{
+    width: 200px;
+}
+
+#objects_content table.devices th.object-list-address6,
+#objects_content table.remotes th.object-list-address6
+{
+    width: 400px;
+}
+
+
+#object-details-content h1
+{
+    font-size: 18px;
+}
+
+#object-details-content h2
+{
+    font-size: 15px;
+}
+
+#object-details-content div.details-left,
+#object-details-content div.details-right
+{
+    width: 400px;
+    padding: 10px;
+}
+
+#object-details-content table.object-details
+{
+    text-align: left;
+    background: #fff;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+#object-details-content table.object-details tbody
+{
+    border-bottom: 20px solid transparent;
+}
+
+#object-details-content table.object-details td
+{
+    background: #fff;
+    padding: 3px;
+}
+
+#object-details-content table.object-details td.label
+{
+    font-weight: bold;
+    width: 120px;
+}
+
+#net-usage-details-content > div
+{
+    min-height: 250px;
+    width:457px;
+}
+
+#net-usage-details-content table.compare_details
+{
+    background: #aaa;
+    margin: 5px;
+    width: 445px;
+}
+
+#net-usage-details-content table.compare_details th.name
+{
+    width: 300px;
+}
+
+#net-usage-details-content table.compare_details th.download
+{
+    width: 100px;
+}
+#net-usage-details-content table.compare_details th.upload
+{
+    width: 100px;
+}
+
+#net-usage-details-content table.compare_details th, 
+#net-usage-details-content table.compare_details td
+{
+    background: #fff;
+    padding: 4px 7px;
+}
+
+#filter
+{
+    display: none;
+}
+
+#net-graph-loader
+{
+    width: 16px;
+    height: 16px;
+    top: 3px;
+    display: none;
+}
+
+#net-usage-table
+{
+    border: 1px solid #555;
+    background: #ccc;
+    width: 400px;
+}
+
+#net-usage-table th, #net-usage-table td
+{
+    background: #fafafa;
+}
+

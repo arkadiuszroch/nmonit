@@ -1,0 +1,34 @@
+<div id = "objects_content">
+    <p>Sort by: </p>
+    &raquo; <a href = "?action=objects&task=list&object=programs">Name: from A to Z</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=programs&desc=1">Name: from Z to A</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=programs&order=usage">Network usage: ascending</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=programs&order=usage&desc=1">Network usage: descending</a>
+    <br /><br />
+    <table class = "objects-list programs" border = "0" cellspacing = "0" cellpadding = "0">
+        <tr>
+            <th class = "object-list-id">
+                ID
+            </th>
+            <th class = "object-list-name">
+                Name
+            </th>
+            <th class = "object-list-details">
+                Details
+            </th>
+        </tr>
+        <?php foreach($this->_vars->programs as $program) : ?>
+        <tr>
+            <td>
+                <?php echo $program['master_id'] ?>
+            </td>
+            <td>
+                <?php echo $program['name'] ?>
+            </td>
+            <td>
+                <a href = "?action=objects&amp;task=details&amp;object=program&amp;id=<?php echo $program['master_id'] ?>">Details</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

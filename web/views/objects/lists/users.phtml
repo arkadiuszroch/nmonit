@@ -1,0 +1,40 @@
+<div id = "objects_content">
+    <p>Sort by: </p>
+    &raquo; <a href = "?action=objects&task=list&object=users">Name: from A to Z</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=users&desc=1">Name: from Z to A</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=users&order=usage">Network usage: ascending</a> <br />
+    &raquo; <a href = "?action=objects&task=list&object=users&order=usage&desc=1">Network usage: descending</a>
+    <br /><br />
+    <table class = "objects-list users" border = "0" cellspacing = "0" cellpadding = "0">
+        <tr>
+            <th class = "object-list-id">
+                ID
+            </th>
+            <th class = "object-list-system_id">
+                System ID
+            </th>
+            <th class = "object-list-name">
+                Name
+            </th>
+            <th class = "object-list-details">
+                Details
+            </th>
+        </tr>
+        <?php foreach($this->_vars->users as $user) : ?>
+        <tr>
+            <td>
+                <?php echo $user['master_id'] ?>
+            </td>
+            <td>
+                <?php echo $user['sys_id'] ?>
+            </td>
+            <td>
+                <?php echo $user['name'] ?>
+            </td>
+            <td>
+                <a href = "?action=objects&amp;task=details&amp;object=user&amp;id=<?php echo $user['master_id'] ?>">Details</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

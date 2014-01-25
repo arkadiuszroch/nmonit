@@ -1,0 +1,58 @@
+<div id = "usage-history-content">
+    <div class = "err_msg"></div>
+    <a id = "filter_text" href = "javascript:void(0)">Filter <span id = "filter_arrow">\/</span></a>
+    <div id = "filter">
+        Type: 
+        <select name = "type" id = "type">
+            <option value = "min">Minute</option>
+            <option value = "hour" selected = "selected">Hour</option>
+            <option value = "day">Day</option>
+            <option value = "mon">Month</option>
+            <option value = "year">Year</option>
+        </select>
+        Format: <span id = "date_format">yyyy-mm-dd</span>
+        <br />
+        Range from: <input type = "text" size = "15" id = "range_start" name = "range_start" value = "" /> 
+        to: <input type = "text" size = "15" id = "range_end" name = "range_end" value = "" />
+        
+        <input type = "button" name = "load" value = "Load graph" />
+        <img id = "net-graph-loader" src = "images/net-graph-loader.gif" border = "0" />
+        <br />
+        
+        Data type: 
+        <label><input type = "radio" name = "data_type" value = "both" checked = "checked" /> Both</label>
+        <label><input type = "radio" name = "data_type" value = "download" /> Download</label>
+        <label><input type = "radio" name = "data_type" value = "upload" /> Upload</label>
+        
+    </div>
+    <div id = "usage_download_chart" style = "width: 900px; height: 250px;"></div>
+
+    <table id = "net-usage-table" cellspacing = "1" cellpadding = "1" align = "center">
+        <tr class = "header">
+            <th>&nbsp;</th>
+            <th>Download</th>
+            <th>Upload</th>
+        </tr>
+        <?php foreach($this->_vars->usage as $date => $usage) : ?>
+        <tr>
+            <th colspan = "3">
+                <?php echo $date ?>
+            </th>
+        </tr>
+        <?php foreach($usage as $date => $info) : ?>
+        <tr>
+            <td class = "date">
+                <?php echo $date ?>
+            </td>
+            <td class = "info">
+                <?php echo $info->rx ?> <?php echo $this->_vars->size_type ?>
+            </td>
+            <td class = "info">
+                <?php echo $info->tx ?> <?php echo $this->_vars->size_type ?>
+            </td>
+        </tr>
+        <?php endforeach ?>
+        <?php endforeach ?>
+
+    </table>
+</div>

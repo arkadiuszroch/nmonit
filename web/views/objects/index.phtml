@@ -1,0 +1,137 @@
+<div id = "objects_content">
+    <h1>Objects list</h1>
+    <table border = "0" cellspacing = "1" cellpadding = "1" class = "objects-main-list">
+        <tbody>
+            <tr>
+                <td>
+                    <h2><a href = "?action=objects&amp;task=list&amp;object=programs">Program list <span class = "show-all">(show all)</span></a></h2>
+
+                    <table class = "objects-list">
+                        <tr>
+                            <th class = "object-list-id">
+                                ID
+                            </th>
+                            <th class = "object-list-name">
+                                Name
+                            </th>
+                            <th class = "object-list-details">
+                                Details
+                            </th>
+                        </tr>
+                        <?php foreach($this->_vars->programs as $program) : ?>
+                        <tr>
+                            <td>
+                                <?php echo $program['master_id'] ?>
+                            </td>
+                            <td>
+                                <?php echo $program['name'] ?>
+                            </td>
+                            <td>
+                                <a href = "?action=objects&amp;task=details&amp;object=program&amp;id=<?php echo $program['master_id'] ?>">Details</a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </td>
+                <td>
+                    <h2><a href = "?action=objects&amp;task=list&amp;object=users">Users list <span class = "show-all">(show all)</span></a></h2>
+
+                    <table class = "objects-list">
+                        <tr>
+                            <th class = "object-list-id">
+                                ID
+                            </th>
+                            <th class = "object-list-system_id">
+                                System ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th class = "object-list-details">
+                                Details
+                            </th>
+                        </tr>
+                        <?php foreach($this->_vars->users as $user) : ?>
+                        <tr>
+                            <td>
+                                <?php echo $user['master_id'] ?>
+                            </td>
+                            <td>
+                                <?php echo $user['sys_id']?>
+                            </td>
+                            <td>
+                                <?php echo $user['name'] ?>
+                            </td>
+                            <td>
+                                <a href = "?action=objects&amp;task=details&amp;object=user&amp;id=<?php echo $user['master_id'] ?>">Details</a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2><a href = "?action=objects&amp;task=list&amp;object=devices">Devices list <span class = "show-all">(show all)</span></a></h2>
+
+                    <table class = "objects-list">
+                        <tr>
+                            <th class = "object-list-id">
+                                ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th class = "object-list-details">
+                                Details
+                            </th>
+                        </tr>
+                        <?php foreach($this->_vars->devices as $device) : ?>
+                        <tr>
+                            <td>
+                                <?php echo $device['master_id'] ?>
+                            </td>
+                            <td>
+                                <?php echo $device['name'] ?>
+                            </td>
+                            <td>
+                                <a href = "?action=objects&amp;task=details&amp;object=device&amp;id=<?php echo $device['master_id'] ?>">Details</a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </td>
+                <td>
+                    <h2><a href = "?action=objects&amp;task=list&amp;object=remotes">Remotes list <span class = "show-all">(show all)</span></a></h2>
+
+                    <table class = "objects-list">
+                        <tr>
+                            <th class = "object-list-id">
+                                ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th class = "object-list-details">
+                                Details
+                            </th>
+                        </tr>
+                        <?php foreach($this->_vars->remotes as $remote) : ?>
+                        <tr>
+                            <td>
+                                <?php echo $remote['master_id'] ?>
+                            </td>
+                            <td>
+                                <?php echo $remote['name'] ?>
+                            </td>
+                            <td>
+                                <a href = "?action=objects&amp;task=details&amp;object=remote&amp;id=<?php echo $remote['master_id'] ?>">Details</a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

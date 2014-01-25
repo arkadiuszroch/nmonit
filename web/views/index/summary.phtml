@@ -1,0 +1,35 @@
+<div id = "charts">
+    <?php foreach($this->_vars->data as $type => $data) : ?>
+    <h2><?php echo $this->_vars->types[$type]?>s summary</h2>
+    <div id = "<?php echo $type?>s_rx" class = "left"></div>
+    <div id = "<?php echo $type?>s_tx" class = "left"></div>
+    <div class = "clear"></div>
+
+    <table class = "list_double left" cellspacing = "1" cellpadding = "1" border = "0">
+        <tr>
+            <th>Name</th>
+            <th>Download</th>
+        </tr>
+        <?php foreach($data['rx'] as $rx) : ?>
+        <tr>
+            <td><?php echo $rx['name']?></td>
+            <td class = "align_right"><?php echo $rx['value']?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+    
+    <table class = "list_double left" cellspacing = "1" cellpadding = "1" border = "0">
+        <tr>
+            <th>Name</th>
+            <th>Upload</th>
+        </tr>
+        <?php foreach($data['tx'] as $tx) : ?>
+        <tr>
+            <td><?php echo $tx['name']?></td>
+            <td class = "align_right"><?php echo $tx['value']?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+    <div class = "clear"></div>
+    <?php endforeach; ?>
+</div>
