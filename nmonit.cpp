@@ -30,13 +30,13 @@ int main(int argc, char * argv[])
             NM_out.set_stream(NM_stream_cout);
             if(argc >= 3)
             {
-                if(string(NM_PARAM_DAEMON_DISABLE).compare(argv[2]))
+                if( string(NM_PARAM_DAEMON_ENABLE).compare(argv[2]) == 0 )
                 {
                     system("update-rc.d nmonit defaults");
                     NM_trigger_notice("NMonit was added to autostart");
                     NM_exit(0);
                 }
-                else if(string(NM_PARAM_DAEMON_DISABLE).compare(argv[2]))
+                else if( string(NM_PARAM_DAEMON_DISABLE).compare(argv[2]) == 0 )
                 {
                     system("update-rc.d nmonit remove");
                     NM_trigger_notice("NMonit was removed from autostart");
